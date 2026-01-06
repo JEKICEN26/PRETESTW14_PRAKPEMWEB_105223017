@@ -12,7 +12,6 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('items', function (Blueprint $table) {
-            // Menambahkan kolom FK, nullable agar aman saat migrasi data lama
             $table->foreignId('category_id')->nullable()->constrained()->nullOnDelete();
         });
     }

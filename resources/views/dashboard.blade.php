@@ -38,7 +38,7 @@
                             <!-- Deskripsi -->
                             <td class="p-2 border">{{ $item->description }}</td>
                             
-                            <!-- Kategori (Menggunakan Null Coalescing ?? jika kategori dihapus/null) -->
+                            <!-- Kategori -->
                             <td class="p-2 border">{{ $item->category->name ?? '-' }}</td>
                             
                             <!-- Stok -->

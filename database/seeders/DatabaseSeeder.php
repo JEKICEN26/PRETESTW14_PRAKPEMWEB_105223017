@@ -17,19 +17,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
 
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
 
-        // 2. Buat Kategori
         $catElektronik = Category::create(['name' => 'Elektronik']);
         $catGelas = Category::create(['name' => 'Alat Gelas']);
         $catKimia = Category::create(['name' => 'Bahan Kimia']);
 
-        // 3. Buat Barang (Items) dan hubungkan dengan Kategori
         Item::create([
             'name' => 'Mikroskop Digital',
             'description' => 'Mikroskop pembesaran 1000x',

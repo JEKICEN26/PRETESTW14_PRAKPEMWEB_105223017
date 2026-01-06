@@ -12,7 +12,6 @@ class LoanController extends Controller
 {
     public function index()
     {
-        // Tambahkan with('category') untuk Eager Loading (optimasi query)
         $items = Item::with('category')->get(); 
         $myLoans = Loan::with('item')->where('user_id', Auth::id())->get(); 
         
